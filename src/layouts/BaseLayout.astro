@@ -1,5 +1,5 @@
 ---
-const brandName = "grove";
+const brandName = "hirokohayashi";
 
 // グローバルレイアウトPC
 import WosHeadPC from "./global/WOSHeadPC.astro";
@@ -23,8 +23,7 @@ import BrandHeadSP from "@BrandComponents/HeadSP.astro";
 import BrandHeaderSP from "@BrandComponents/HeaderSP.astro";
 import BrandFooterSP from "@BrandComponents/FooterSP.astro";
 
-const pageTitle =
-  "grove | ワールド オンラインストア | WORLD ONLINE STORE";
+const pageTitle = `${brandName} | ワールド オンラインストア | WORLD ONLINE STORE`;
 
 import { useUserAgent } from "astro-useragent";
 const uaString = Astro.request.headers.get("user-agent");
