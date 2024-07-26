@@ -1,5 +1,5 @@
 ---
-import ItemList from "../components/common/ItemList.astro";
+import ItemList from '../components/common/ItemList.astro';
 
 // ダミー商品
 const items1 = [{}, {}, { sara10: true }, { sale: true }];
@@ -8,10 +8,7 @@ const items1 = [{}, {}, { sara10: true }, { sale: true }];
 <!-- sample webfont -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
 <!-- html -->
 <article class="lp-demo">
@@ -49,17 +46,17 @@ const items1 = [{}, {}, { sara10: true }, { sale: true }];
   (function ($2) {
     $2(document).ready(function () {
       const inview = (function () {
-        $2(window).on("load scroll resize", function () {
+        $2(window).on('load scroll resize', function () {
           var wself = $2(this);
           var offset = wself.height() / 4;
           wself.scrollTop() + offset;
           var windowBtm = wself.scrollTop() + wself.height() - offset;
-          $2(".is-target").each(function () {
+          $2('.is-target').each(function () {
             var self = $2(this);
             var targetPosTop = self.offset().top;
             self.offset().top + self.outerHeight();
             if (windowBtm >= targetPosTop) {
-              self.addClass("is-active");
+              self.addClass('is-active');
             }
           });
         });
