@@ -1,0 +1,20 @@
+#line_info,
+#wos_ft_menu,
+#uhd_bnr {
+  display: none;
+}
+.contents-area::after {
+  display: none;
+}
+.search-toggle_form_wrap {
+  display: none;
+}
+.wrap_header > div:last-child:not([class]) {
+  display: none;
+}
+div#navigation {
+  z-index: 10000;
+}
+#sale_uhd_bnr.uhd_bnr_laxus{
+  display: none;
+}

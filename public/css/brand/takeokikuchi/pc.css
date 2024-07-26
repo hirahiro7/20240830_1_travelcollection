@@ -1,0 +1,13 @@
+#UNIVHEADER,
+#univhd {
+  display: none;
+}
+.contents-area::after {
+  display: none;
+}
+#sale_uhd_bnr.uhd_bnr_laxus{
+  display: none;
+}
+.wos-info a.wos-info__btn {
+  font-size: 13px;
+}
