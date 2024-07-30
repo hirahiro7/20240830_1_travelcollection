@@ -5,6 +5,10 @@ import {
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
+  server: {
+    // アクセスを許可
+    host: true,
+  },
   vite: {
     css: {
       preprocessorOptions: {
