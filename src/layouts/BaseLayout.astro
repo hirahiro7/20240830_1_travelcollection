@@ -1,32 +1,32 @@
 ---
-const brandName = "takeokikuchi";
+const brandName = 'indivi';
 
 // グローバルレイアウトPC
-import WosHeadPC from "./global/WOSHeadPC.astro";
-import WosHeaderPC from "./global/WOSHeaderPC.astro";
-import WosFooterPC from "./global/WOSFooterPC.astro";
+import WosHeadPC from './global/WOSHeadPC.astro';
+import WosHeaderPC from './global/WOSHeaderPC.astro';
+import WosFooterPC from './global/WOSFooterPC.astro';
 
 // グローバルレイアウトSP
-import WosHeadSP from "./global/WOSHeadSP.astro";
-import WosHeaderSP from "./global/WOSHeaderSP.astro";
-import WosFooterSP from "./global/WOSFooterSP.astro";
+import WosHeadSP from './global/WOSHeadSP.astro';
+import WosHeaderSP from './global/WOSHeaderSP.astro';
+import WosFooterSP from './global/WOSFooterSP.astro';
 
 // ブランドコンポーネントPC
 // 詳細のパスは tsconfig.json
-import BrandHeadPC from "@BrandComponents/HeadPC.astro";
-import BrandHeaderPC from "@BrandComponents/HeaderPC.astro";
-import BrandFooterPC from "@BrandComponents/FooterPC.astro";
+import BrandHeadPC from '@BrandComponents/HeadPC.astro';
+import BrandHeaderPC from '@BrandComponents/HeaderPC.astro';
+import BrandFooterPC from '@BrandComponents/FooterPC.astro';
 
 // ブランドコンポーネントSP
 // 詳細のパスは tsconfig.json
-import BrandHeadSP from "@BrandComponents/HeadSP.astro";
-import BrandHeaderSP from "@BrandComponents/HeaderSP.astro";
-import BrandFooterSP from "@BrandComponents/FooterSP.astro";
+import BrandHeadSP from '@BrandComponents/HeadSP.astro';
+import BrandHeaderSP from '@BrandComponents/HeaderSP.astro';
+import BrandFooterSP from '@BrandComponents/FooterSP.astro';
 
 const pageTitle = `${brandName} | ワールド オンラインストア | WORLD ONLINE STORE`;
 
-import { useUserAgent } from "astro-useragent";
-const uaString = Astro.request.headers.get("user-agent");
+import { useUserAgent } from 'astro-useragent';
+const uaString = Astro.request.headers.get('user-agent');
 const { source, isMobile } = useUserAgent(uaString);
 
 const { breadcrumb } = Astro.props;
@@ -63,18 +63,12 @@ const { breadcrumb } = Astro.props;
       }
       <div class="wrap_breadcrumb">
         <ul class="breadcrumbs">
-          <li
-            itemscope="itemscope"
-            itemtype="http://data-vocabulary.org/Breadcrumb"
-          >
+          <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
             <a href="" itemprop="url" class="top--icon">トップ</a>
           </li>
           {
             breadcrumb.map((item) => (
-              <li
-                itemscope="itemscope"
-                itemtype="http://data-vocabulary.org/Breadcrumb"
-              >
+              <li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
                 <a href="" itemprop="url">
                   {item}
                 </a>
