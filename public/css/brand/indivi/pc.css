@@ -1,0 +1,73 @@
+  /* #UNIVHEADER,
+#univhd,
+#idv-header {
+  display: none;
+} */
+#sale_uhd_bnr {
+  display: none !important;
+}
+
+#univhd {
+  position: relative !important;
+}
+
+/* 下層ページサイズモーダル */
+.sizelistwrap {
+  /* display: block !important; */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.sizelistwrap .white_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: inline-block;
+  width: 990px;
+  height: 340px;
+  padding: 15px;
+  background: #fff;
+}
+.sizelistwrap .white_area .close_btn {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  transition: 0.2s;
+}
+.sizelistwrap .white_area .close_btn:hover {
+  opacity: 0.7;
+}
+
+.footer-category__inner {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: baseline;
+}
+.footer-category__col.ico_sns {
+  margin: 0 20px 0 0;
+}
+.footer-category__col.ico_sns:nth-of-type(4) {
+  margin: 0 30px 0 0;
+}
+.footer-category__ico {
+  margin: auto;
+}
+#l_stage.rank_04 {
+  background: #9ea3c2;
+}
+#l_stage.rank_03 {
+  background: #caad49;
+}
+#l_stage.rank_02 {
+  background: #b8b8b8;
+}
+#l_stage.rank_01 {
+  background: #fff;
+}

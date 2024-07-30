@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Noto Sans JP;
+  src: url("/res/s/brand/indivi/common/font/NotoSansJP-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+  @font-face {
+  font-family: Noto Sans JP;
+  src: url("/res/s/brand/indivi/common/font/NotoSansJP-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  }
+  
+  .indivi-header__col .indivi-btn-menu .indivi-btn-menu-txt,
+  .indivi-header__col .indivi-btn-search .indivi-btn-search-txt{
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, helvetica, sans-serif;
+  }
+  #sale_uhd_bnr {
+    display: none !important;
+  }
+  
+  /* .contents-area.is-fixed {
+    padding-top: 85px;
+  } */
+  
+  div.indivi-header__col .indivi-btn-menu{
+  position: relative;
+  }
+  /* =============================================
+  　h1
+  ============================================= */
+  .contents-area .ti_sale {
+    clear: both;
+    color: #C30000;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 10px 10px;
+    margin:0 !important;
+    font-family: 'Marcellus', serif !important;
+  }
+  .contents-area .ti_sale span {
+    display:block;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  
+  /* =============================================
+  　検索結果
+  ============================================= */
+  .ti_sale {
+    clear: both;
+    text-align:center;
+    padding: 10px 10px 0;
+    margin:0 !important;
+  }
+  .ti_sale a {
+    color: #C30000;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  a.bt_next {
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    margin:10px auto 20px;
+    padding:7px 0 20px;
+    text-align: center;
+    border:#5e5e5e 1px solid;
+    color:#5e5e5e;
+    width: 93%;
+    font-family: 'Montserrat', sans-serif;
+    background:url(/s/brand/indivi/common/img/search/item_all.gif) center 28px no-repeat !important;
+  }
+  
+  
+  /* =============================================
+  　TAB
+  ============================================= */
+  #size_tab {
+    padding: 20px;
+    text-align:center;
+  }
+  #size_tab li {
+    background:#000;
+    border:#000 1px solid;
+    display:inline-block;
+    cursor:pointer;
+  }
+  #size_tab li a {
+    color:#FFF;
+    font-size: 10px;
+    font-weight:bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    display:inline-block;
+    padding: 5px;
+  }
+  #size_tab li.select {
+    background:#FFF;
+  }
+  #size_tab li.select a {
+    color:#000;
+    text-decoration: none;
+  }
+  
+  
+  /* =============================================
+  　商品詳細調整
+  ============================================= */
+  .dv_recommend { width:auto; padding:5px 10px; }
+  .dv_recommend .dv_rc_items { width:33%; display:inline-table; font-size:10px; line-height:130%; padding-bottom:5px; text-align:left !important; }
+  .dv_recommend .dv_rc_items img { width:100%; height:auto; }
+  .dv_recommend .dv_rc_items a { padding:0px; text-align:left; display:block; }
+  .dv_recommend .dv_rc_price { padding:0 0px; font-size:9px; }
+  .dv_rc_description { display:none; }
+  .dv_rc_brand { padding:1px 0 4px 0; width: 95px; white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
+  .dv_recommend .dv_rc_name{ width: 95px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  
+  h3#ti_recommend {
+      clear: both;
+      margin:0px auto;
+      padding:20px 0 0 0;
+      text-align: center;
+      width: 100%;
+      font-size:18px;
+  }
+  h3#ti_recommend img {
+      width: 185px !important;
+  }
+  h3#ti_recommend p {
+      color: #111 !important;
+      font-size: 10px !important;
+      padding: 5px 0 0 0 !important;
+      text-align: center !important;
+  }
+  
+  #detail_name .item_name {
+      line-height: 1.5;
+  }
+  
+  /* 商品詳細サイズバリエーション */
+  #bt_size { margin:0px auto 25px auto; }
+  #bt_size ol { text-align:center }
+  #bt_size ol li { display:inline-block; margin:0 2px; font-family:"Montserrat",sans-serif !important; } 
+  #bt_size ol li span { display:none; }
+  
+  #bt_size ol li { border:1px solid #111; color:#111; font-size:10px; } 
+  #bt_size ol li.bt_size_off { border:1px solid #666; color:#666; background:#fff;} 
+  #bt_size ol li.bt_size_on { border:1px solid #111; color:#111; background:#fff;}
+  
+  #bt_size ol li a { background:#000; display:block; padding:5px 5px; text-align:center; color:#fff; } 
+  #bt_size ol li a:link {color:#fff; text-decoration: none;} #bt_size ol li a:visited {color:#fff; text-decoration: none;} 
+  #bt_size ol li a:hover {color:#fff; text-decoration: none;} #bt_size ol li a:active {color:#fff; text-decoration: none;}
+  
+  #bt_size ol li.bt_size_on a { background:#fff; display:block; padding:5px 5px; text-align:center; color:#fff; cursor:none; } 
+  #bt_size ol li.bt_size_on a:link {color:#000; text-decoration: none; } 
+  #bt_size ol li.bt_size_on a:visited {color:#000; text-decoration: none; } 
+  #bt_size ol li.bt_size_on a:hover {color:#000; text-decoration: none; } 
+  #bt_size ol li.bt_size_on a:active {color:#000; text-decoration: none; } 
+  
+  .price .price_sale,
+  .stack_item .price_sale,
+  .price .price_sale_excluded_wrapper,
+  .price .price_sale_included_wrapper { color:#c30000 !important;}
+  
+  .price .price_off,
+  .stack_item .price_off { color:#445e9a !important;}
+  
+  .top-item-ranking{ display: none;}
+
+  .footer-sns__item {
+    width: 28px;
+    color: #a6a6a6 !important;
+    margin: auto;
+}
+.footer-sns a:link {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.footer-sns__ico {
+    margin-right: 0.4em;
+}
+#l_stage.rank_04 {
+  background: #9ea3c2;
+}
+#l_stage.rank_03 {
+  background: #caad49;
+}
+#l_stage.rank_02 {
+  background: #b8b8b8;
+}
+#l_stage.rank_01 {
+  background: #fff;
+}

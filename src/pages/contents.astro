@@ -2,7 +2,7 @@
 import ItemList from '../components/common/ItemList.astro';
 
 // ダミー商品
-const items1 = [{}, {}, { sara10: true }, { sale: true }];
+const items1 = [{ summary: true }, {}, { sara10: false }, { sale: true }];
 ---
 
 <!-- sample webfont -->
@@ -13,7 +13,10 @@ const items1 = [{}, {}, { sara10: true }, { sale: true }];
 <!-- html -->
 <article class="lp-demo">
   <div class="lp-demo__wrap">
-    <p>same</p>
+    <p style="margin-top: 60px">LP</p>
+    <p>ＬＰを実装</p>
+    <p style="margin-bottom: 60px"></p>
+    <!-- <p>sample</p> -->
     <ItemList items={items1} />
   </div>
 </article>
