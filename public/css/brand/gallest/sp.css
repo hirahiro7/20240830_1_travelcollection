@@ -1,0 +1,27 @@
+div#navigation {
+  z-index: 10000;
+}
+div#UNIVHEADER,
+div#univhd,
+div#idv-header,
+div#sale_uhd_bnr {
+  display: none !important;
+}
+
+.mystageRank {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#l_stage.rank_04 {
+  background: #9ea3c2;
+}
+#l_stage.rank_03 {
+  background: #caad49;
+}
+#l_stage.rank_02 {
+  background: #b8b8b8;
+}
+#l_stage.rank_01 {
+  background: #fff;
+}
