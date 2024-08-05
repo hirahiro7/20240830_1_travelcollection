@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@BrandComponents/*": ["src/components/brand/indivi/*"],
+      "@BrandComponents/*": ["src/components/brand/gallest/*"],
     }
   }
 }
