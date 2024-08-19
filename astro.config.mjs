@@ -17,6 +17,9 @@ export default defineConfig({
           additionalData: `@import "src/styles/_mixin.scss", "src/styles/base.scss";`
         }
       }
+    },
+    build: {
+      minify: false,
     }
   },
   build: {
