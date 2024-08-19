@@ -12,7 +12,7 @@
 
 // デザインスケール 375px
 @function vw($px) {
-  @return calc(#{$px} * (100vw / 375));
+  @return calc(#{$px} * (100vw / #{375}));
 }
 
 @mixin font-lato() {
