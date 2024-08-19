@@ -1,0 +1,6 @@
+#univhd.hdr_wrap.is-fixed{
+  display: none;
+  }
+#block2,div#tk_contents_01.tk_contents .bx-wrapper .bx-controls-direction a{
+z-index: 1000;
+}
