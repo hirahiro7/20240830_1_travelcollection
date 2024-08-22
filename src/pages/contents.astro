@@ -1,8 +1,75 @@
 ---
 import ItemList from '../components/common/ItemList.astro';
 
+import CArr from '../components/CArr.astro';
+import AnchorIt from '../components/AnchorIt.astro';
 // ダミー商品
 const items1 = [{ summary: true }, {}, { sara10: false }, { sale: true }];
+
+const bags = [
+  {
+    info: [
+      {
+        link: '',
+        name: 'BOSTON BAG',
+        price: '',
+        desc: '',
+      },
+    ],
+    slides: {
+      imgs: ['', '', ''],
+      desc: '',
+    },
+  },
+  {
+    info: [
+      {
+        link: '',
+        name: '2WAY BOSTON BAG',
+        price: '',
+        desc: '',
+      },
+    ],
+    slides: {
+      imgs: ['', '', ''],
+      desc: '',
+    },
+  },
+  {
+    info: [
+      {
+        link: '',
+        name: 'SACOCHE',
+        price: '',
+        desc: '',
+      },
+    ],
+    slides: {
+      imgs: ['', '', ''],
+      desc: '',
+    },
+  },
+  {
+    info: [
+      {
+        link: '',
+        name: 'TRAVEL POACH<M>',
+        price: '',
+        desc: '',
+      },
+      {
+        link: '',
+        name: 'TRAVEL POACH<S>',
+        price: '',
+        desc: '',
+      },
+    ],
+    slides: {
+      imgs: ['', '', ''],
+      desc: '',
+    },
+  },
+];
 ---
 
 <!-- sample webfont -->
@@ -11,13 +78,34 @@ const items1 = [{ summary: true }, {}, { sara10: false }, { sale: true }];
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
 <!-- html -->
-<article class="lp-demo">
-  <div class="lp-demo__wrap">
-    <p style="margin-top: 60px">LP</p>
-    <p>ＬＰを実装</p>
-    <p style="margin-bottom: 60px"></p>
-    <!-- <p>sample</p> -->
-    <ItemList items={items1} />
+<article class="trravel">
+  <div class="trravel__main">
+    <div class="trravel-main">
+      <img class="trravel-main__img" src="" alt="" />
+      <h2 class="trravel-main__ttl">
+        <img src="" alt="" />
+      </h2>
+      <CArr />
+      <p class="trravel-main__lead"></p>
+    </div>
+  </div>
+  <div class="trravel__collection">
+    <div class="trravel-collection">
+      <p class="trravel-collection__sub"></p>
+      <p class="trravel-collection__main"></p>
+      <p class="trravel-collection__ja"></p>
+      <div class="trravel-collection__txt">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="trravel__anchor">
+    <div class="trravel-anchor">
+      <p class="trravel-anchor__ttl"></p>
+      <div class="trravel-anchor__wrap">
+        {datas.map((data, index) => <AnchorIt />)}
+      </div>
+    </div>
   </div>
 </article>
 
