@@ -1,0 +1,10 @@
+---
+const { imgPath, desc } = Astro.props;
+---
+
+<div class="slide-it">
+  <div class="slide-it__img">
+    <img src={imgPath} alt="" />
+  </div>
+  <p class="slide-it__desc" set:html={desc} />
+</div>

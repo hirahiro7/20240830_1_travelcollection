@@ -1,0 +1,27 @@
+---
+import CArr from '../components/CArr.astro';
+
+const { index, info } = Astro.props;
+---
+
+<section class="bag-type">
+  {
+    info.map((it, i) => (
+      <div class="bag-type__info">
+        <h3 class="bag-type__ttl">{it.name}</h3>
+        <CArr />
+        <a href="" class="bag-type__link">
+          <div class="bag-type__img">
+            <img src={it.imgPath} alt="" />
+          </div>
+          <p class="bag-type__price">{it.price}</p>
+        </a>
+        <p class="bag-type__txt" set:html={it.desc} />
+      </div>
+      <div class="bag-type__slider">
+        <slot/>
+      </div>
+    ))
+  }
+  <slot />
+</section>

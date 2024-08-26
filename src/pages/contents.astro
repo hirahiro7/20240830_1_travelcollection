@@ -3,71 +3,120 @@ import ItemList from '../components/common/ItemList.astro';
 
 import CArr from '../components/CArr.astro';
 import AnchorIt from '../components/AnchorIt.astro';
+import SliderIt from '../components/SliderIt.astro';
+
+import BagTypeLayout from '../layouts/BagTypeLayout.astro';
+import SliderLayout from '../layouts/SliderLayout.astro';
+import type { ACTION_ERROR_CODES } from 'astro:actions';
 // ダミー商品
 const items1 = [{ summary: true }, {}, { sara10: false }, { sale: true }];
-
 const bags = [
   {
     info: [
       {
-        link: '',
+        link: '/item/BR70999A1304?areaid=sp709_hiroko',
+        imgPath: '',
         name: 'BOSTON BAG',
-        price: '',
-        desc: '',
+        price: '49,500',
+        desc: 'トートバッグとハンドバッグの2WAY仕様。<br>1～2泊程度の旅行におすすめのサイズでキャリーオンが可能です。ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
       },
     ],
-    slides: {
-      imgs: ['', '', ''],
-      desc: '',
-    },
+    slides: [
+      {
+        imgPath: '',
+        desc: '2つの持ち手で、手で持っても肩に掛けてもバランスよくお持ちいただけます。',
+      },
+      {
+        imgPath: '',
+        desc: 'スーツケースのハンドル部分に通すスリーブ付きで、持ち運びに便利。',
+      },
+      {
+        imgPath: '',
+        desc: '内ポケットも充実。<br>お揃いのポーチM・Sも使ってさらに使いやすく。',
+      },
+    ],
   },
   {
     info: [
       {
-        link: '',
+        link: '/item/BR70999A1305?areaid=sp709_hiroko',
+        imgPath: '',
         name: '2WAY BOSTON BAG',
-        price: '',
-        desc: '',
+        price: '44,000',
+        desc: 'ハンドバッグとショルダーバッグの2WAY仕様。1泊程度の旅行におすすめのサイズでキャリーオンが可能です。ノートPCがちょうど入るサイズでお仕事バッグとしても〇<br>ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
       },
     ],
-    slides: {
-      imgs: ['', '', ''],
-      desc: '',
-    },
+    slides: [
+      {
+        imgPath: '',
+        desc: 'ファスナーでしっかり閉まるボストンバッグは機内持ち込みにも最適。',
+      },
+      {
+        imgPath: '',
+        desc: '両手の空くショルダータイプはアクティブなご旅行はもちろん、荷物の多いお仕事にも。',
+      },
+      {
+        imgPath: '',
+        desc: 'スーツケースの取っ手に通して、スリーブの内側のボタンを留めれば、横滑りせず安定した使い心地に。',
+      },
+    ],
   },
   {
     info: [
       {
-        link: '',
+        link: '/item/BR70999A1306?areaid=sp709_hiroko',
+        imgPath: '',
         name: 'SACOCHE',
-        price: '',
-        desc: '',
+        price: '27,500',
+        desc: '旅先や普段のおでかけにも便利な貴重品をまとめて収納できるサイズのサコッシュ。薄マチ仕様で移動が多い時でもかさばらずお使いいただけます。',
       },
     ],
-    slides: {
-      imgs: ['', '', ''],
-      desc: '',
-    },
+    slides: [
+      {
+        imgPath: '',
+        desc: '貴重品、必需品をしっかり収納。<br>忘れ物はないですか？',
+      },
+      {
+        imgPath: '',
+        desc: 'ひっそり隠れた便利な外ポケット。<br>スプーンの引手がアクセントに。',
+      },
+      {
+        imgPath: '',
+        desc: '小ぶりで薄マチだから、夏の薄着にも合わせやすく、冬はコートの中に忍ばせても〇',
+      },
+    ],
   },
   {
     info: [
       {
-        link: '',
+        link: '/item/BR70999A1307?areaid=sp709_hiroko',
+        imgPath: '',
         name: 'TRAVEL POACH<M>',
-        price: '',
-        desc: '',
+        price: '19,800',
+        desc: '旅行に特化したトラベルポーチ。衣類やスタイリングアイテムが入るサイズです。内ポケットもあるので、どこに入れたか忘れがちな細々した物もまとめてこちらに。旅先の整理整頓に活躍間違いなし！',
       },
       {
-        link: '',
+        link: '/item/BR70999A1308?areaid=sp709_hiroko',
+        imgPath: '',
         name: 'TRAVEL POACH<S>',
-        price: '',
-        desc: '',
+        price: '17,600',
+        desc: 'スキンケアアイテムやコスメが入るサイズで普段使いにもおすすめです。シンプルなつくりだから、どう使うか、何を入れるかはあなた次第。',
       },
     ],
-    slides: {
-      imgs: ['', '', ''],
-      desc: '',
-    },
+    slides: [
+      {
+        imgPath: '',
+        desc: 'スーツケースの中身の整理にポーチが便利！<br>おみやげの収納場所もお忘れなく。',
+      },
+      {
+        imgPath: '',
+        desc: 'ブラックとベージュの2色展開だから、中身に合わせて色分けして使うのもおすすめです。',
+      },
+      {
+        imgPath: '',
+        desc: '1日分の洋服のセットを入れてみたり、嵩張るスキンケアやスタイリングアイテムをまとめてみたり。旅行の準備もはかどりそう。',
+      },
+    ],
   },
 ];
 ---
@@ -86,30 +135,76 @@ const bags = [
         <img src="" alt="" />
       </h2>
       <CArr />
-      <p class="trravel-main__lead"></p>
+      <p class="trravel-main__lead">
+        旅の相棒バッグはお持ちですか？<br />
+        この度ヒロコ ハヤシからトラベルコレクションがデビュー。<br />
+        遊び心と実用性を兼ね備えた、旅行に必須なアイテムを揃えました。<br />
+        お気に入りの相棒と共に素敵な旅にでかけませんか。
+      </p>
     </div>
   </div>
   <div class="trravel__collection">
     <div class="trravel-collection">
-      <p class="trravel-collection__sub"></p>
-      <p class="trravel-collection__main"></p>
-      <p class="trravel-collection__ja"></p>
+      <p class="trravel-collection__sub">TRAVEL Collection</p>
+      <p class="trravel-collection__main">COMODA</p>
+      <p class="trravel-collection__ja">コモダ</p>
       <div class="trravel-collection__txt">
-        <p></p>
+        <p>
+          COMODA…快適<br />
+          ミラノの街の地図を地元の人が手書きで描いてくれたら！という遊び心から生まれたオリジナルプリントのトラベルコレクション。<br />
+          撥水性のあるナイロン素材は実用性と高級感があり、旅を快適にしてくれるアイテムに仕上げました。
+        </p>
       </div>
     </div>
   </div>
   <div class="trravel__anchor">
     <div class="trravel-anchor">
-      <p class="trravel-anchor__ttl"></p>
+      <p class="trravel-anchor__ttl">TRAVEL with COMODA</p>
       <div class="trravel-anchor__wrap">
-        {datas.map((data, index) => <AnchorIt />)}
+        {bags.map((bag, index) => <AnchorIt />)}
+      </div>
+    </div>
+  </div>
+  <div class="trravel__wrap">
+    {
+      bags.map((bag, index) => (
+        <BagTypeLayout index={index} {...bag}>
+          <SliderLayout>
+            {bag.slides.map((slide, index) => (
+              <SliderIt {...slide} />
+            ))}
+          </SliderLayout>
+        </BagTypeLayout>
+      ))
+    }
+  </div>
+  <div class="trravel__btn">
+    <a href="/s/brand/hirokohayashi/search?st=1&un=fku&link_id=709_H_search&fr=COMODA">VIEW ALL</a>
+  </div>
+  <div class="trravel__campaign">
+    <div class="trravel-campaign">
+      <p class="trravel-campaign__ttl"></p>
+      <CArr />
+      <div class="trravel-campaign__wrap"></div>
+      <div class="trravel-campaign__desc">
+        <p>「COMODA」発売を記念してCOMODAシリーズと同じプリントを使ったストックバッグをプレゼント。</p>
+        <dl>
+          <dt>期間</dt>
+          <dd>8/30(金)～ 無くなり次第終了</dd>
+        </dl>
+        <dl>
+          <dt>条件</dt>
+          <dd>期間中、バッグをお買い上げの方にプレゼント<span class="is-note">一部対象外あり。詳しくはスタッフにお尋ねください。</span></dd>
+        </dl>
+        <dl>
+          <dt>対象店舗</dt>
+          <dd><a href="/real-store-search?pcf=1&br=BR709" target="_blank">直営店舗全店</a><span class="is-note">オンラインストアは対象外です。</span></dd>
+        </dl>
       </div>
     </div>
   </div>
 </article>
 
-<!-- scss -->
 <style lang="scss">
   .lp-demo {
     width: 100%;
@@ -134,16 +229,16 @@ const bags = [
 
 <!-- javascript -->
 <script>
-  (function ($2) {
-    $2(document).ready(function () {
+  (function ($) {
+    $(document).ready(function () {
       const inview = (function () {
-        $2(window).on('load scroll resize', function () {
-          var wself = $2(this);
+        $(window).on('load scroll resize', function () {
+          var wself = $(this);
           var offset = wself.height() / 4;
           wself.scrollTop() + offset;
           var windowBtm = wself.scrollTop() + wself.height() - offset;
-          $2('.is-target').each(function () {
-            var self = $2(this);
+          $('.is-target').each(function () {
+            var self = $(this);
             var targetPosTop = self.offset().top;
             self.offset().top + self.outerHeight();
             if (windowBtm >= targetPosTop) {

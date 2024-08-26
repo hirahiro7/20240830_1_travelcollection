@@ -20,7 +20,7 @@ export default defineConfig({
     },
     build: {
       minify: false,
-    }
+    },
   },
   build: {
     // 必ずcssを作成
