@@ -22,3 +22,15 @@
 @mixin font-garamond() {
   font-family: "Cormorant Garamond", serif;
 }
+
+@mixin font1() {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: italic;;
+}
+
+@mixin font2() {
+  font-family: "Vujahday Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

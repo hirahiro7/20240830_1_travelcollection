@@ -1,0 +1,74 @@
+---
+const { info } = Astro.props
+// const { imgPath, name, anchorcap, target} = Astro.props
+// const imgPath = info.imgPath;
+// const name = info.name;
+// const anchorcap = info.imgPath;
+import { Image } from 'astro:assets';
+---
+
+{
+  info.map((data) => (
+    <div class="anchor-it" data-target={data.target}>
+      <div class="anchor-it__img">
+        <img src={data.imgPath} alt="">
+      </div>
+      <p class="anchor-it__name" set:html={data.anchorcap ? data.anchorcap : data.name} ></div>
+      <div class="anchor-it__arr">
+        <svg width="18" height="11.115" viewBox="0 0 18 11.115">
+          <path d="M11.115,11.76,18,18.63l6.885-6.87L27,13.875l-9,9-9-9Z" transform="translate(-9 -11.76)" fill="#333"/>
+        </svg>
+
+      </div>
+      
+    </div>
+  ))
+}
+
+<style lang="scss" is:global>
+  .anchor-it{
+    inline-size: vw(100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(3) ~ &{
+      inline-size: vw(120);
+    }
+
+    &__img{
+      inline-size: vw(100);
+      block-size: vw(100);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+
+    &__name{
+      font-size: vw(10);
+      inline-size: max-content;
+
+      br{
+        display: none;
+      }
+    }
+
+    &__arr{
+      inline-size: vw(12);
+      margin-block-start: vw(10);
+
+      svg{
+        display: block;
+        inline-size: 100%;
+        height: auto;
+      }
+    }
+  }
+</style>

@@ -15,23 +15,24 @@ const bags = [
     info: [
       {
         link: '/item/BR70999A1304?areaid=sp709_hiroko',
-        imgPath: '',
+        imgPath: './img/it1.jpg',
         name: 'BOSTON BAG',
         price: '49,500',
         desc: 'トートバッグとハンドバッグの2WAY仕様。<br>1～2泊程度の旅行におすすめのサイズでキャリーオンが可能です。ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
+        target: 1,
       },
     ],
     slides: [
       {
-        imgPath: '',
+        imgPath: './img/sc1-1.jpg',
         desc: '2つの持ち手で、手で持っても肩に掛けてもバランスよくお持ちいただけます。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc1-2.jpg',
         desc: 'スーツケースのハンドル部分に通すスリーブ付きで、持ち運びに便利。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc1-3.jpg',
         desc: '内ポケットも充実。<br>お揃いのポーチM・Sも使ってさらに使いやすく。',
       },
     ],
@@ -40,23 +41,24 @@ const bags = [
     info: [
       {
         link: '/item/BR70999A1305?areaid=sp709_hiroko',
-        imgPath: '',
+        imgPath: './img/it2.jpg',
         name: '2WAY BOSTON BAG',
         price: '44,000',
         desc: 'ハンドバッグとショルダーバッグの2WAY仕様。1泊程度の旅行におすすめのサイズでキャリーオンが可能です。ノートPCがちょうど入るサイズでお仕事バッグとしても〇<br>ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
+        target: 2,
       },
     ],
     slides: [
       {
-        imgPath: '',
+        imgPath: './img/sc2-1.jpg',
         desc: 'ファスナーでしっかり閉まるボストンバッグは機内持ち込みにも最適。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc2-2.jpg',
         desc: '両手の空くショルダータイプはアクティブなご旅行はもちろん、荷物の多いお仕事にも。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc2-3.jpg',
         desc: 'スーツケースの取っ手に通して、スリーブの内側のボタンを留めれば、横滑りせず安定した使い心地に。',
       },
     ],
@@ -65,23 +67,24 @@ const bags = [
     info: [
       {
         link: '/item/BR70999A1306?areaid=sp709_hiroko',
-        imgPath: '',
+        imgPath: './img/it3.jpg',
         name: 'SACOCHE',
         price: '27,500',
         desc: '旅先や普段のおでかけにも便利な貴重品をまとめて収納できるサイズのサコッシュ。薄マチ仕様で移動が多い時でもかさばらずお使いいただけます。',
+        target: 3,
       },
     ],
     slides: [
       {
-        imgPath: '',
+        imgPath: './img/sc3-1.jpg',
         desc: '貴重品、必需品をしっかり収納。<br>忘れ物はないですか？',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc3-2.jpg',
         desc: 'ひっそり隠れた便利な外ポケット。<br>スプーンの引手がアクセントに。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc3-3.jpg',
         desc: '小ぶりで薄マチだから、夏の薄着にも合わせやすく、冬はコートの中に忍ばせても〇',
       },
     ],
@@ -90,17 +93,21 @@ const bags = [
     info: [
       {
         link: '/item/BR70999A1307?areaid=sp709_hiroko',
-        imgPath: '',
+        imgPath: './img/it4-1.jpg',
         name: 'TRAVEL POACH<M>',
+        anchorcap: 'TRAVEL POACH<br>&lt;M&gt;',
         price: '19,800',
         desc: '旅行に特化したトラベルポーチ。衣類やスタイリングアイテムが入るサイズです。内ポケットもあるので、どこに入れたか忘れがちな細々した物もまとめてこちらに。旅先の整理整頓に活躍間違いなし！',
+        target: 41,
       },
       {
         link: '/item/BR70999A1308?areaid=sp709_hiroko',
-        imgPath: '',
+        imgPath: './img/it4-2.jpg',
         name: 'TRAVEL POACH<S>',
+        anchorcap: 'TRAVEL POACH<br>&lt;S&gt;',
         price: '17,600',
         desc: 'スキンケアアイテムやコスメが入るサイズで普段使いにもおすすめです。シンプルなつくりだから、どう使うか、何を入れるかはあなた次第。',
+        target: 42,
       },
     ],
     slides: [
@@ -124,15 +131,15 @@ const bags = [
 <!-- sample webfont -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Vujahday+Script&display=swap" rel="stylesheet">
 
 <!-- html -->
 <article class="trravel">
   <div class="trravel__main">
     <div class="trravel-main">
-      <img class="trravel-main__img" src="" alt="" />
+      <img class="trravel-main__img" src="./img/mv_pc.jpg" alt="" />
       <h2 class="trravel-main__ttl">
-        <img src="" alt="" />
+        <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
       </h2>
       <CArr />
       <p class="trravel-main__lead">
@@ -151,8 +158,8 @@ const bags = [
       <div class="trravel-collection__txt">
         <p>
           COMODA…快適<br />
-          ミラノの街の地図を地元の人が手書きで描いてくれたら！という遊び心から生まれたオリジナルプリントのトラベルコレクション。<br />
-          撥水性のあるナイロン素材は実用性と高級感があり、旅を快適にしてくれるアイテムに仕上げました。
+          ミラノの街の地図を地元の人が手書きで描いてくれたら！<br class="is-sp">という遊び心から生まれたオリジナルプリントの<br class="is-sp">トラベルコレクション。<br />
+          撥水性のあるナイロン素材は実用性と高級感があり、<br class="is-sp">旅を快適にしてくれるアイテムに仕上げました。
         </p>
       </div>
     </div>
@@ -161,7 +168,7 @@ const bags = [
     <div class="trravel-anchor">
       <p class="trravel-anchor__ttl">TRAVEL with COMODA</p>
       <div class="trravel-anchor__wrap">
-        {bags.map((bag, index) => <AnchorIt />)}
+        {bags.map((bag, index) => <AnchorIt {...bag}/>)}
       </div>
     </div>
   </div>
@@ -203,28 +210,181 @@ const bags = [
       </div>
     </div>
   </div>
+  <div class="trravel__logo">
+    <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
+  </div>
 </article>
 
-<style lang="scss">
-  .lp-demo {
-    width: 100%;
+<style lang="scss" is:global>
+  .trravel {
+    inline-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include lg() {
-      width: 1190px;
+    min-inline-size: 320px;
+    letter-spacing: .05em;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+
+    img{
+      max-inline-size: 100%;
+      height: auto;
+    }
+
+    &__main{
+      position: relative;
+    }
+
+    &__collection{
+      position: relative;
+      margin-block-start: vw(80);
+    }
+
+    &__anchor{
+      position: relative;
+      margin-block-start: vw(80);
+      background: url('./img/bg.jpg') center / cover no-repeat;
+      padding: vw(50) vw(12);
+      box-sizing: border-box;
     }
 
     &__wrap {
       position: relative;
+      margin-block-start: vw(100);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: vw(150);
+    }
 
-      p {
-        font-size: 18px;
-        text-align: center;
-        @include font-lato();
-      }
+    &__btn {
+      position: relative;
+      margin-block-start: vw(100);
+    }
+
+    &__campaign {
+      position: relative;
+      margin-block-start: vw(200);
+    }
+
+    &__logo {
+      position: relative;
+      margin-block-start: vw(100);
+    }
+}
+
+.trravel-main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img{
+    position: relative;
+
+    img{
+      inline-size: 100%;
     }
   }
+
+  &__ttl{
+    position: relative;
+    inline-size: vw(300);
+    margin-block-start: vw(50) !important;
+  }
+
+  > .carr{
+    margin-block-start: vw(50);
+  }
+
+  &__lead{
+    font-size: vw(11);
+    line-height: calc(#{30/11});
+    margin-block-start: vw(50);
+    text-align: center;
+  }
+}
+
+.trravel-collection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__sub{
+    @include font1();
+    font-weight: bold;
+    font-size: vw(16);
+    line-height: 1.0;
+  }
+
+  &__main{
+    @include font1();
+    font-weight: bold;
+    font-size: vw(28);
+    line-height: 1.0;
+    margin-block-start: vw(15);
+  }
+
+  &__ja{
+    font-size: vw(11);
+    line-height: 1.0;
+    margin-block-start: vw(15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: vw(20);
+
+    &::after{
+      content: "";
+      background: #000;
+      inline-size: vw(12);
+      block-size: 1px;
+    }
+  }
+
+  &__txt{
+    font-size: vw(11);
+    line-height: calc(#{30/11});
+    margin-block-start: vw(15);
+    text-align: center
+  }
+}
+
+.trravel-anchor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: vw(54) vw(6);
+  box-sizing: border-box;
+  background: #fff;
+
+  &__ttl{
+    @include font1();
+    font-weight: bold;
+    font-size: vw(16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: vw(20);
+
+    &::after{
+      content: "";
+      background: #000;
+      inline-size: vw(12);
+      block-size: 1px;
+    }
+  }
+
+  &__wrap{
+    position: relative;
+    margin-block-start: vw(50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: vw(10) vw(7);
+  }
+
+}
 </style>
 
 <!-- javascript -->

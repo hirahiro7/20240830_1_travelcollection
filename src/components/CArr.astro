@@ -2,4 +2,46 @@
 
 ---
 
-<div class="test"></div>
+<div class="carr">
+  <div class="carr__it"></div>
+  <div class="carr__it"></div>
+  <div class="carr__it"></div>
+</div>
+
+<style lang="scss" is:global>
+  .carr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__it{
+      font-size: 16px;
+      line-height: 1.0;
+
+      &::before{
+        content: '▽';
+        animation: anime 2.0s infinite;
+      }
+
+      &:nth-child(2)::before{
+        animation-delay: .2s;
+      }
+
+      &:nth-child(3)::before{
+        animation-delay: .4s;
+      }
+    }
+  }
+
+  @keyframes anime {
+    from{
+      content: '▽';
+    }
+    to{
+      content: '▼';
+      
+    }
+    
+  }
+</style>

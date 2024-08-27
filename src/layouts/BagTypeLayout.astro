@@ -10,18 +10,72 @@ const { index, info } = Astro.props;
       <div class="bag-type__info">
         <h3 class="bag-type__ttl">{it.name}</h3>
         <CArr />
-        <a href="" class="bag-type__link">
-          <div class="bag-type__img">
+        <div class="bag-type__img">
+          <a href="" class="bag-type__link">
             <img src={it.imgPath} alt="" />
-          </div>
-          <p class="bag-type__price">{it.price}</p>
-        </a>
+          </a>
+        </div>
+        <p class="bag-type__price">&yen;{it.price}</p>
         <p class="bag-type__txt" set:html={it.desc} />
-      </div>
-      <div class="bag-type__slider">
-        <slot/>
       </div>
     ))
   }
-  <slot />
+  <div class="bag-type__slider">
+    <slot/>
+  </div>
 </section>
+
+<style lang="scss" is:global>
+  .bag-type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__info{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & + &{
+        border-top: 1px solid #000;
+      }
+
+      > .carr{
+        margin-block-start: vw(20);
+      }
+
+    }
+
+    &__ttl{
+      @include font1();
+      font-weight: bold;
+      font-size: vw(30);
+      line-height: 1.0;
+    }
+
+    &__img{
+      inline-size: vw(300);
+      margin-block-start: vw(40);
+    }
+
+    &__price{
+      font-size: vw(12);
+      margin-block-start: vw(10);
+    }
+
+    &__txt{
+      inline-size: vw(300);
+      margin-block-start: vw(30);
+      font-size: vw(12);
+      line-height: calc(#{24/11});
+      text-align: center;
+    }
+
+    &__slider{
+      position: relative;
+      margin-block-start: vw(40);
+    }
+
+  }
+</style>
