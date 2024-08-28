@@ -18,7 +18,7 @@ const bags = [
         imgPath: './img/it1.jpg',
         name: 'BOSTON BAG',
         price: '49,500',
-        desc: 'トートバッグとハンドバッグの2WAY仕様。<br>1～2泊程度の旅行におすすめのサイズでキャリーオンが可能です。ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
+        desc: 'トートバッグとハンドバッグの2WAY仕様。<br>1～2泊程度の旅行におすすめのサイズでキャリーオンが可能です。<br class="is-pc">ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
         target: 1,
       },
     ],
@@ -44,7 +44,7 @@ const bags = [
         imgPath: './img/it2.jpg',
         name: '2WAY BOSTON BAG',
         price: '44,000',
-        desc: 'ハンドバッグとショルダーバッグの2WAY仕様。1泊程度の旅行におすすめのサイズでキャリーオンが可能です。ノートPCがちょうど入るサイズでお仕事バッグとしても〇<br>ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
+        desc: 'ハンドバッグとショルダーバッグの2WAY仕様。1泊程度の旅行におすすめのサイズでキャリーオンが可能です。<br class="is-pc">ノートPCがちょうど入るサイズでお仕事バッグとしても〇<br>ショルダー部分は太めのナイロンベルトで肩に負担がかかりにくい仕様になっています。',
         target: 2,
       },
     ],
@@ -70,7 +70,7 @@ const bags = [
         imgPath: './img/it3.jpg',
         name: 'SACOCHE',
         price: '27,500',
-        desc: '旅先や普段のおでかけにも便利な貴重品をまとめて収納できるサイズのサコッシュ。薄マチ仕様で移動が多い時でもかさばらずお使いいただけます。',
+        desc: '旅先や普段のおでかけにも便利な貴重品をまとめて収納できるサイズのサコッシュ。<br class="is-pc">薄マチ仕様で移動が多い時でもかさばらずお使いいただけます。',
         target: 3,
       },
     ],
@@ -97,7 +97,7 @@ const bags = [
         name: 'TRAVEL POACH<M>',
         anchorcap: 'TRAVEL POACH<br>&lt;M&gt;',
         price: '19,800',
-        desc: '旅行に特化したトラベルポーチ。衣類やスタイリングアイテムが入るサイズです。内ポケットもあるので、どこに入れたか忘れがちな細々した物もまとめてこちらに。旅先の整理整頓に活躍間違いなし！',
+        desc: '旅行に特化したトラベルポーチ。衣類やスタイリングアイテムが入るサイズです。<br class="is-pc">内ポケットもあるので、どこに入れたか忘れがちな<br class="is-pc">細々した物もまとめてこちらに。旅先の整理整頓に活躍間違いなし！',
         target: 41,
       },
       {
@@ -106,21 +106,21 @@ const bags = [
         name: 'TRAVEL POACH<S>',
         anchorcap: 'TRAVEL POACH<br>&lt;S&gt;',
         price: '17,600',
-        desc: 'スキンケアアイテムやコスメが入るサイズで普段使いにもおすすめです。シンプルなつくりだから、どう使うか、何を入れるかはあなた次第。',
+        desc: 'スキンケアアイテムやコスメが入るサイズで普段使いにもおすすめです。<br class="is-pc">シンプルなつくりだから、どう使うか、何を入れるかはあなた次第。',
         target: 42,
       },
     ],
     slides: [
       {
-        imgPath: '',
+        imgPath: './img/sc4-1.jpg',
         desc: 'スーツケースの中身の整理にポーチが便利！<br>おみやげの収納場所もお忘れなく。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc4-2.jpg',
         desc: 'ブラックとベージュの2色展開だから、中身に合わせて色分けして使うのもおすすめです。',
       },
       {
-        imgPath: '',
+        imgPath: './img/sc4-3.jpg',
         desc: '1日分の洋服のセットを入れてみたり、嵩張るスキンケアやスタイリングアイテムをまとめてみたり。旅行の準備もはかどりそう。',
       },
     ],
@@ -137,7 +137,7 @@ const bags = [
 <article class="trravel">
   <div class="trravel__main">
     <div class="trravel-main">
-      <img class="trravel-main__img" src="./img/mv_pc.jpg" alt="" />
+      <img class="trravel-main__img is-target" src="./img/mv_pc.jpg" alt="" />
       <h2 class="trravel-main__ttl">
         <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
       </h2>
@@ -178,7 +178,7 @@ const bags = [
         <BagTypeLayout index={index} {...bag}>
           <SliderLayout>
             {bag.slides.map((slide, index) => (
-              <SliderIt {...slide} />
+              <SliderIt index={index} {...slide} />
             ))}
           </SliderLayout>
         </BagTypeLayout>
@@ -186,15 +186,17 @@ const bags = [
     }
   </div>
   <div class="trravel__btn">
-    <a href="/s/brand/hirokohayashi/search?st=1&un=fku&link_id=709_H_search&fr=COMODA">VIEW ALL</a>
+    <a href="/s/brand/hirokohayashi/search?st=1&un=fku&link_id=709_H_search&fr=COMODA">view all</a>
   </div>
   <div class="trravel__campaign">
     <div class="trravel-campaign">
-      <p class="trravel-campaign__ttl"></p>
+      <p class="trravel-campaign__ttl">TRAVEL Campaign</p>
       <CArr />
-      <div class="trravel-campaign__wrap"></div>
+      <div class="trravel-campaign__img is-target">
+        <img src="./img/info.jpg" alt="">
+      </div>
       <div class="trravel-campaign__desc">
-        <p>「COMODA」発売を記念してCOMODAシリーズと同じプリントを使ったストックバッグをプレゼント。</p>
+        <p>「COMODA」発売を記念してCOMODAシリーズと<br class="is-pc">同じプリントを使ったストックバッグをプレゼント。</p>
         <dl>
           <dt>期間</dt>
           <dd>8/30(金)～ 無くなり次第終了</dd>
@@ -209,6 +211,17 @@ const bags = [
         </dl>
       </div>
     </div>
+
+    <div class="trravel-photo">
+      <p class="trravel-photo__mess">Cerchiamolo sulla mappa!<br>Luoghi consigliati</p>
+      <div class="trravel-photo__wrap">
+        <div class="trravel-photo__it is-active"><img src="./img/map1.jpg" alt=""></div>
+        <div class="trravel-photo__it"><img src="./img/map2.jpg" alt=""></div>
+        <div class="trravel-photo__it"><img src="./img/map3.jpg" alt=""></div>
+        <div class="trravel-photo__it"><img src="./img/map4.jpg" alt=""></div>
+        <div class="trravel-photo__it"><img src="./img/map5.jpg" alt=""></div>
+      </div>
+    </div>    
   </div>
   <div class="trravel__logo">
     <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
@@ -216,6 +229,21 @@ const bags = [
 </article>
 
 <style lang="scss" is:global>
+  .contents-area{
+    @include lg{
+      width: 100%;
+    }
+  }
+  .is-target{
+    transition: .6s;
+    opacity: 0;
+    transform: translateY(20px);
+
+    &.is-active{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .trravel {
     inline-size: 100%;
     display: flex;
@@ -224,6 +252,9 @@ const bags = [
     min-inline-size: 320px;
     letter-spacing: .05em;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    @include lg{
+      min-inline-size: 1190px;
+    }
 
     img{
       max-inline-size: 100%;
@@ -232,19 +263,34 @@ const bags = [
 
     &__main{
       position: relative;
+      @include lg{
+        inline-size: 1190px;
+      }
     }
 
     &__collection{
       position: relative;
       margin-block-start: vw(80);
+      @include lg{
+        margin-block-start: 100px;
+      }
     }
 
     &__anchor{
       position: relative;
       margin-block-start: vw(80);
-      background: url('./img/bg.jpg') center / cover no-repeat;
+      background: url('./img/bg.jpg') top / 375px 612px;
       padding: vw(50) vw(12);
       box-sizing: border-box;
+      @include lg{
+        margin-block-start: 150px;
+        padding: 110px 20px;
+        inline-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: 750px 1224px;
+      }
     }
 
     &__wrap {
@@ -254,21 +300,91 @@ const bags = [
       flex-direction: column;
       align-items: center;
       gap: vw(150);
+      @include lg{
+        margin-block-start: 150px;
+        gap: 150px;
+      }
     }
 
     &__btn {
       position: relative;
       margin-block-start: vw(100);
+      @include lg{
+        margin-block-start: 150px;
+      }
+
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inline-size: vw(204);
+        block-size: vw(56);
+        @include font1();
+        font-size: vw(11);
+        line-height: 1.0;
+        font-weight: 200;
+        gap: vw(6);
+        border: 1px solid #000;
+        border-radius: vw(28);
+        padding-block-start: vw(3);
+        box-sizing: border-box;
+        @include lg{
+          inline-size: 630px;
+          block-size: 82px;
+          font-size: 18px;
+          gap: 8px;
+          border-radius: 41px;
+          padding-block-start: 2px;
+          transition: .2s;
+          &:hover{
+            background: #000;
+            color: #fff;
+          }
+        }
+
+        &::before{
+          content: 'COMODO';
+          font-weight: bold;
+          // font-size: vw(13);
+        }
+
+        &::after{
+          content: '→';
+        }
+      }
     }
 
     &__campaign {
       position: relative;
       margin-block-start: vw(200);
+      background: url('./img/bg.jpg') top / 375px 612px;
+      padding: vw(50) vw(12);
+      box-sizing: border-box;
+      inline-size: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include lg{
+        margin-block-start: 150px;
+        padding: 100px 20px;
+      }
+
+      > * + *{
+        margin-block-start: vw(50);
+        @include lg{
+          margin-block-start: 100px;
+        }
+      }
     }
 
     &__logo {
       position: relative;
       margin-block-start: vw(100);
+      inline-size: vw(300);
+      @include lg{
+        margin-block-start: 150px;
+        inline-size: 500px;
+      }
     }
 }
 
@@ -290,10 +406,17 @@ const bags = [
     position: relative;
     inline-size: vw(300);
     margin-block-start: vw(50) !important;
+    @include lg{
+      inline-size: 500px;
+      margin-block-start: 100px !important;
+    }
   }
 
   > .carr{
     margin-block-start: vw(50);
+    @include lg{
+      margin-block-start: 100px;
+    }
   }
 
   &__lead{
@@ -301,6 +424,11 @@ const bags = [
     line-height: calc(#{30/11});
     margin-block-start: vw(50);
     text-align: center;
+    @include lg{
+      font-size: 16px;
+      line-height: calc(#{40/16});
+      margin-block-start: 80px;
+    }
   }
 }
 
@@ -314,6 +442,9 @@ const bags = [
     font-weight: bold;
     font-size: vw(16);
     line-height: 1.0;
+    @include lg{
+      font-size: 24px;
+    }
   }
 
   &__main{
@@ -322,6 +453,10 @@ const bags = [
     font-size: vw(28);
     line-height: 1.0;
     margin-block-start: vw(15);
+    @include lg{
+      font-size: 40px;
+      margin-block-start: 20px;
+    }
   }
 
   &__ja{
@@ -332,12 +467,20 @@ const bags = [
     flex-direction: column;
     align-items: center;
     gap: vw(20);
+    @include lg{
+      font-size: 14px;
+      margin-block-start: 10px;
+      gap: 30px;
+    }
 
     &::after{
       content: "";
       background: #000;
       inline-size: vw(12);
       block-size: 1px;
+      @include lg{
+        inline-size: 20px;
+      }
     }
   }
 
@@ -345,7 +488,12 @@ const bags = [
     font-size: vw(11);
     line-height: calc(#{30/11});
     margin-block-start: vw(15);
-    text-align: center
+    text-align: center;
+    @include lg{
+      font-size: 16px;
+      line-height: calc(#{30/16});
+      margin-block-start: 30px;
+    }
   }
 }
 
@@ -356,6 +504,10 @@ const bags = [
   padding: vw(54) vw(6);
   box-sizing: border-box;
   background: #fff;
+  @include lg{
+    padding: 150px 30px;
+    inline-size: 1190px
+  }
 
   &__ttl{
     @include font1();
@@ -365,12 +517,19 @@ const bags = [
     flex-direction: column;
     align-items: center;
     gap: vw(20);
+    @include lg{
+      font-size: 24px;
+      gap: 30px;
+    }
 
     &::after{
       content: "";
       background: #000;
       inline-size: vw(12);
       block-size: 1px;
+      @include lg{
+        inline-size: 20px;
+      }
     }
   }
 
@@ -382,8 +541,178 @@ const bags = [
     align-items: center;
     flex-wrap: wrap;
     gap: vw(10) vw(7);
+    @include lg{
+      margin-block-start: 40px;
+      gap: 8px;
+      align-items: flex-start;
+    }
   }
 
+}
+
+.trravel-campaign{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: vw(50) vw(12);
+  box-sizing: border-box;
+  @include lg{
+    padding: 150px 30px;
+    inline-size: 1190px;
+  }
+
+  &__ttl{
+    @include font1();
+    font-size: vw(30);
+    letter-spacing: .1em;
+    font-weight: bold;
+    @include lg{
+      font-size: 70px;
+    }
+  }
+
+  > .carr{
+    margin-block-start: vw(30);
+    @include lg{
+      margin-block-start: 50px;
+    }
+  }
+
+  &__img{
+    margin-block-start: vw(25);
+    inline-size: vw(270);
+    @include lg{
+      margin-block-start: 50px;
+      inline-size: 700px;
+    }
+  }
+
+  &__desc{
+    inline-size: vw(300);
+    margin-block-start: vw(40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include lg{
+      inline-size: 700px;
+      margin-block-start: 50px;
+    }
+
+    p{
+      inline-size: vw(300);
+      font-size: vw(12);
+      line-height: 1.5;
+      @include lg{
+        inline-size: auto;
+        font-size: 16px;
+      }
+    }
+
+    dl{
+      margin-block-start: vw(20);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include lg{
+        margin-block-start: 50px;
+      }
+
+      dt{
+        font-size: vw(14);
+        text-decoration: underline;
+        @include lg{
+          font-size: 20px;
+        }
+      }
+      dd{
+        font-size: vw(12);
+        line-height: 1.5;
+        margin-block-start: vw(10);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include lg{
+          font-size: 16px;
+          margin-block-start: 15px;
+        }
+
+        a{
+          text-decoration: underline;
+        }
+
+        .is-note{
+          margin-block-start: vw(8);
+          font-size: vw(10);
+          &::before{
+            content: '※';
+          }
+          @include lg{
+            margin-block-start: 8px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.trravel-photo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: vw(300);
+  background: #F2F2F2;
+  padding: vw(25);
+  box-sizing: border-box;
+  @include lg{
+    inline-size: 600px;
+    padding: 50px
+  }
+
+  &__mess{
+    @include font2();
+    font-size: vw(13);
+    line-height: 1.0;
+    letter-spacing: .1em;
+    transform: rotateZ(-5deg);
+    inline-size: 100%;
+    @include lg{
+      font-size: 30px;
+    }
+  }
+
+  &__wrap{
+    inline-size: 100%;
+    position: relative;
+    margin-block-start: vw(38);
+    @include lg{
+      margin-block-start: 70px;
+    }
+
+    &::before{
+      content: '';
+      position: relative;
+      display: block;
+      inset: 0 auto auto 0;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__it{
+    inline-size: 100%;
+    block-size: 100%;
+    position: absolute;
+    inset: 0 auto auto 0;
+    opacity: 0;
+    transition: 1.0s;
+
+    &.is-active{
+      opacity: 1;
+      z-index: 5;
+    }
+  }
 }
 </style>
 
@@ -407,6 +736,90 @@ const bags = [
           });
         });
       })();
+
+      const anchor = (()=>{
+        $(".anchor-it").on('click',function(){
+          let num = $(this).attr('data-target');
+          let offset = 150;
+          let targetPos = $('.bag-type__info[data-target*='+num+']').offset().top;
+          $('html,body').animate({scrollTop:targetPos-offset-20},400,function(){
+            $('html,body').animate({scrollTop:targetPos-offset},400);          
+          });
+        });
+      })();
+
+      const slider = (function () {
+        //animation END
+        const ANIMATIONONEND = 'webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend';
+        //transition END
+        const TRANSITIONEND = 'webkitTransitionEnd MozTransitionEnd mozTransitionEnd msTransitionEnd oTransitionEnd transitionEnd transitionend';
+
+        // 移動許可フラグ
+        let flg = true;
+
+        const next = function(itmEl,wrapEl){
+          // アニメーション
+          // if(!flg) return true;
+          flg = false;
+          wrapEl.addClass('is-nextAni');
+          itmEl.one(TRANSITIONEND,function(){
+            itmEl.appendTo(wrapEl);
+            wrapEl.removeClass('is-nextAni');
+            flg = true;
+            $(this).off();
+          })
+        };
+
+        const prev = function(itmEl,wrapEl){
+          // アニメーション
+          // let wrapEl = $('.bag-slider__slider');
+          // if(!flg) return true;
+          flg = false;
+          wrapEl.addClass('is-prevAni');
+          let firstEl = itmEl.eq(0);
+          let lastEl = itmEl.last();
+          lastEl.one(TRANSITIONEND,function(){
+            lastEl.prependTo(wrapEl);
+            wrapEl.removeClass('is-prevAni');
+            flg = true;
+            $(this).off();
+          })
+        };
+
+        $('.bag-slider').each(function(){
+          let el = $(this);
+          let wrapEl = el.find('.bag-slider__slider');
+          let itmEl = el.find('.slide-it');
+          let timer;
+          
+          // 次へボタン
+          $(this).find('.arr-next').on('click',function(){
+            itmEl = el.find('.slide-it').eq(0);
+            next(itmEl,wrapEl);
+            clearInterval(timer);
+          });
+
+          $(this).find('.arr-prev').on('click',function(){
+            itmEl = el.find('.slide-it');
+            prev(itmEl,wrapEl);
+            clearInterval(timer);
+          });
+
+          timer = setInterval(function(){
+            itmEl = el.find('.slide-it').eq(0);
+            next(itmEl,wrapEl);
+          },3000);
+
+        });
+      })();
+
+      const picslide = (()=>{
+        setInterval(function(){
+          let current = $(".trravel-photo__it.is-active");
+          (current.next().length) ? current.removeClass('is-active').next().addClass('is-active') : $(".trravel-photo__it").eq(0).addClass('is-active').siblings().removeClass('is-active');
+        },2500);        
+      })();
+
     });
   })($);
 </script>

@@ -31,9 +31,20 @@ import { Image } from 'astro:assets';
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include lg{
+      inline-size: 200px;
+      transition: .2s;
+      &:hover{
+        cursor: pointer;
+        opacity: .5;
+      }
+    }
 
     &:nth-child(3) ~ &{
       inline-size: vw(120);
+      @include lg{
+      inline-size: 200px;
+      }
     }
 
     &__img{
@@ -42,6 +53,10 @@ import { Image } from 'astro:assets';
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      @include lg{
+        inline-size: 200px;
+        block-size: 200px;
+      }
 
       img{
         width: 100%;
@@ -54,20 +69,37 @@ import { Image } from 'astro:assets';
     &__name{
       font-size: vw(10);
       inline-size: max-content;
+      @include lg{
+        font-size: 16px;
+        min-block-size: 36px;
+        text-align: center;
+      }
 
       br{
         display: none;
+        @include lg{
+          display: block;
+        }
       }
     }
 
     &__arr{
       inline-size: vw(12);
       margin-block-start: vw(10);
+      @include lg{
+        inline-size: 18px;
+        margin-block-start: 10px;
+      }
 
       svg{
         display: block;
         inline-size: 100%;
         height: auto;
+        transition: .2s;
+
+        &:is(.anchor-it:hover *){
+          transform: translateY(10px);
+        }
       }
     }
   }

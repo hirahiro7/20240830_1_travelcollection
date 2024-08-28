@@ -16,5 +16,72 @@ const { index, info } = Astro.props;
       </svg>      
     </div>
   </div>
-  <slot />
+  <div class="bag-slider__slider">
+    <slot />
+  </div>
 </div>
+
+<style lang="scss" is:global>
+  .bag-slider{
+    inline-size: 100svi;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .arr-prev{
+      inline-size: vw(18);
+      position: absolute;
+      inset: vw(180) auto auto vw(8);
+      @include lg{
+        inline-size: 40px;
+        inset: 400px auto auto 50%;
+        transform: translateX(-50%);
+        margin-inline-start: -410px;
+        z-index: 10;
+        transition: .2s;
+        &:hover{
+          cursor: pointer;
+          opacity: .5;;
+        }
+      }
+
+      svg{
+        inline-size: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .arr-next{
+      inline-size: vw(18);
+      position: absolute;
+      inset: vw(180) vw(8) auto auto;
+      @include lg{
+        inline-size: 40px;
+        inset: 400px 50% auto auto;
+        transform: translateX(50%);
+        margin-inline-end: -410px;
+        z-index: 10;
+        transition: .2s;
+        &:hover{
+          cursor: pointer;
+          opacity: .5;;
+        }
+      }
+      svg{
+        inline-size: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &__slider{
+      position: relative;
+      inline-size: vw(300);
+      @include lg{
+        inline-size: 700px;
+      }
+    }
+}
+</style>

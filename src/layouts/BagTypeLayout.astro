@@ -2,15 +2,16 @@
 import CArr from '../components/CArr.astro';
 
 const { index, info } = Astro.props;
+
 ---
 
 <section class="bag-type">
   {
     info.map((it, i) => (
-      <div class="bag-type__info">
+      <div class="bag-type__info" data-target={it.target}>
         <h3 class="bag-type__ttl">{it.name}</h3>
         <CArr />
-        <div class="bag-type__img">
+        <div class="bag-type__img is-target">
           <a href="" class="bag-type__link">
             <img src={it.imgPath} alt="" />
           </a>
@@ -39,10 +40,19 @@ const { index, info } = Astro.props;
 
       & + &{
         border-top: 1px solid #000;
+        margin-block-start: vw(40);
+        padding-block-start: vw(40);
+        @include lg{
+          margin-block-start: 100px;
+          padding-block-start: 100px;
+        }
       }
 
       > .carr{
         margin-block-start: vw(20);
+        @include lg{
+          margin-block-start: 20px;
+        }
       }
 
     }
@@ -52,16 +62,35 @@ const { index, info } = Astro.props;
       font-weight: bold;
       font-size: vw(30);
       line-height: 1.0;
+      @include lg{
+        font-size: 70px;
+      }
     }
 
     &__img{
       inline-size: vw(300);
       margin-block-start: vw(40);
+      @include lg{
+        inline-size: 700px;
+        margin-block-start: 40px;
+
+        a{
+          transition: .2s;
+
+          &:hover{
+            opacity: .5;
+          }
+        }
+      }
     }
 
     &__price{
       font-size: vw(12);
       margin-block-start: vw(10);
+      @include lg{
+        font-size: 16px;
+        margin-block-start: 20px;
+      }
     }
 
     &__txt{
@@ -70,11 +99,23 @@ const { index, info } = Astro.props;
       font-size: vw(12);
       line-height: calc(#{24/11});
       text-align: center;
+      @include lg{
+        inline-size: auto;
+        margin-block-start: 50px;
+        font-size: 16px;
+        line-height: calc(#{30/16});
+      }
     }
 
     &__slider{
       position: relative;
       margin-block-start: vw(40);
+      background: #F6F5F4;
+      padding: vw(60) vw(40);
+      @include lg{
+        margin-block-start: 100px;
+        padding: 100px 30px;
+      }
     }
 
   }
