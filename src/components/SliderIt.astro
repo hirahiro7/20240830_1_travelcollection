@@ -83,10 +83,12 @@ const { index, imgPath, desc } = Astro.props;
       margin-block-start: vw(30);
       font-size: vw(12);
       line-height: 2.0;
+      min-block-size: calc(2 * 3em);
       background: #F6F5F4;
       opacity: 0;
       @include lg{
         margin-block-start: 60px;
+        min-block-size: calc(2 * 2em);
         font-size: 16px;
         text-align: center;
       }
