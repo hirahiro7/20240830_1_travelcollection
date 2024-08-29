@@ -4,7 +4,7 @@ import {
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  // output: 'server',
   server: {
     // アクセスを許可
     host: true,

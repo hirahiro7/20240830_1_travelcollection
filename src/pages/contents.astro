@@ -138,14 +138,14 @@ const bags = [
   <div class="trravel__main">
     <div class="trravel-main">
       <img class="trravel-main__img is-target" src="./img/mv_pc.jpg" alt="" />
-      <h2 class="trravel-main__ttl">
+      <h2 class="trravel-main__ttl is-target">
         <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
       </h2>
       <CArr />
       <p class="trravel-main__lead">
         旅の相棒バッグはお持ちですか？<br />
         この度ヒロコ ハヤシからトラベルコレクションがデビュー。<br />
-        遊び心と実用性を兼ね備えた、旅行に必須なアイテムを揃えました。<br />
+        遊び心と実用性を兼ね備えた、<br class="is-sp">旅行に必須なアイテムを揃えました。<br />
         お気に入りの相棒と共に素敵な旅にでかけませんか。
       </p>
     </div>
@@ -203,7 +203,7 @@ const bags = [
         </dl>
         <dl>
           <dt>条件</dt>
-          <dd>期間中、バッグをお買い上げの方にプレゼント<span class="is-note">一部対象外あり。詳しくはスタッフにお尋ねください。</span></dd>
+          <dd>期間中「COMODA」を含む、ヒロコハヤシのバッグをお買い上げの方にプレゼント<span class="is-note">一部対象外あり。詳しくはスタッフにお尋ねください。</span></dd>
         </dl>
         <dl>
           <dt>対象店舗</dt>
@@ -223,7 +223,7 @@ const bags = [
       </div>
     </div>    
   </div>
-  <div class="trravel__logo">
+  <div class="trravel__logo is-target">
     <img src="./img/logo.jpg" alt="BUONVIAGGIO" />
   </div>
 </article>
@@ -319,7 +319,7 @@ const bags = [
         display: flex;
         justify-content: center;
         align-items: center;
-        inline-size: vw(204);
+        inline-size: vw(260);
         block-size: vw(56);
         @include font1();
         font-size: vw(11);
@@ -345,7 +345,7 @@ const bags = [
         }
 
         &::before{
-          content: 'COMODO';
+          content: 'COMODA';
           font-weight: bold;
           // font-size: vw(13);
         }
@@ -369,6 +369,7 @@ const bags = [
       @include lg{
         margin-block-start: 150px;
         padding: 100px 20px;
+        background-size: 750px 1224px;
       }
 
       > * + *{
@@ -387,6 +388,15 @@ const bags = [
         margin-block-start: 150px;
         inline-size: 500px;
       }
+      &.is-target{
+        transition: .4s;
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+        &.is-active{
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+
     }
 }
 
@@ -411,6 +421,14 @@ const bags = [
     @include lg{
       inline-size: 500px;
       margin-block-start: 100px !important;
+    }
+    &.is-target{
+      transition: .4s;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+      &.is-active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
     }
   }
 

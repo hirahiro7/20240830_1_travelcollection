@@ -35,9 +35,9 @@ const { index, info } = Astro.props;
       inset: vw(180) auto auto vw(8);
       @include lg{
         inline-size: 40px;
-        inset: 400px auto auto 50%;
+        inset: 260px auto auto 50%;
         transform: translateX(-50%);
-        margin-inline-start: -410px;
+        margin-inline-start: -280px;
         z-index: 10;
         transition: .2s;
         &:hover{
@@ -59,9 +59,9 @@ const { index, info } = Astro.props;
       inset: vw(180) vw(8) auto auto;
       @include lg{
         inline-size: 40px;
-        inset: 400px 50% auto auto;
+        inset: 260px 50% auto auto;
         transform: translateX(50%);
-        margin-inline-end: -410px;
+        margin-inline-end: -280px;
         z-index: 10;
         transition: .2s;
         &:hover{
@@ -80,7 +80,7 @@ const { index, info } = Astro.props;
       position: relative;
       inline-size: vw(300);
       @include lg{
-        inline-size: 700px;
+        inline-size: 460px;
       }
     }
 }
